@@ -14,6 +14,7 @@ using System.Net.Http;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using System.Security.Claims;
+using System.Net;
 
 namespace CompanyEmployees.Client.Controllers
 {
@@ -40,11 +41,15 @@ namespace CompanyEmployees.Client.Controllers
 
                 return View(companyViewModel);
             }
+            else if(response.StatusCode == HttpStatusCode.Unauthorized || response.StatusCode == HttpStatusCode.Forbidden)
+            {
+                return RedirectToAction("AccessDenied", "Account");
+            }
 
             throw new Exception($"Problem with fetching data from the API: {response.ReasonPhrase}");
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Policy = "CanCreateAndModifyData")]
         public async Task<IActionResult> Privacy()
         {
             var client = new HttpClient();

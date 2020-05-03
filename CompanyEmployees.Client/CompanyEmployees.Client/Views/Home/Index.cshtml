@@ -1,4 +1,7 @@
-﻿@model IEnumerable<CompanyEmployees.Client.Models.CompanyViewModel>
+﻿@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService AuthorizationService
+
+@model IEnumerable<CompanyEmployees.Client.Models.CompanyViewModel>
 
 @{
     ViewData["Title"] = "Index";
@@ -6,7 +9,7 @@
 
 <h1>Index</h1>
 
-@if (User.IsInRole("Admin"))
+@if ((await AuthorizationService.AuthorizeAsync(User, "CanCreateAndModifyData")).Succeeded)
 {
     <p>
         <a asp-action="Create">Create New</a>
@@ -40,7 +43,7 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.FullAddress)
                 </td>
-                @if (User.IsInRole("Admin"))
+                @if ((await AuthorizationService.AuthorizeAsync(User, "CanCreateAndModifyData")).Succeeded)
                 {
                     <td>
                         @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
