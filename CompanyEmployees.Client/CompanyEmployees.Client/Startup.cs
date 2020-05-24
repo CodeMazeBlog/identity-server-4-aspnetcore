@@ -53,11 +53,11 @@ namespace CompanyEmployees.Client
                 //opt.ClaimActions.MapUniqueJsonKey("address", "address");
 
                 opt.Scope.Add("roles");
-                opt.ClaimActions.MapUniqueJsonKey("roles", "role");
+                opt.ClaimActions.MapUniqueJsonKey("role", "role");
 
                 opt.TokenValidationParameters = new TokenValidationParameters
                 {
-                    RoleClaimType = "roles"
+                    RoleClaimType = "role"
                 };
             });
 
