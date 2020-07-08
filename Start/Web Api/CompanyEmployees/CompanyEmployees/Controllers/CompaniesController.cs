@@ -23,7 +23,7 @@ namespace CompanyEmployees.Controllers
             _mapper = mapper;
         }
 
-        //[Authorize]
+        [Authorize]
         [HttpGet]
         public IActionResult GetCompanies()
         {
