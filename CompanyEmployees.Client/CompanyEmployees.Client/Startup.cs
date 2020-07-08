@@ -75,7 +75,7 @@ namespace CompanyEmployees.Client
                     policyBuilder.RequireAuthenticatedUser();
                     policyBuilder.RequireClaim("position", "Administrator");
                     policyBuilder.RequireClaim("country", "USA");
-                 });
+                });
             });
 
             services.AddControllersWithViews();

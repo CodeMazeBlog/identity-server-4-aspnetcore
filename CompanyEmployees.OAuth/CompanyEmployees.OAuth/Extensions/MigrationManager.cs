@@ -43,6 +43,16 @@ namespace CompanyEmployees.OAuth.Extensions
                             context.SaveChanges();
                         }
 
+                        if(!context.ApiScopes.Any())
+                        {
+                            foreach (var apiScope in InMemoryConfig.GetApiScopes())
+                            {
+                                context.ApiScopes.Add(apiScope.ToEntity());
+                            }
+
+                            context.SaveChanges();
+                        }
+
                         if (!context.ApiResources.Any())
                         {
                             foreach (var resource in InMemoryConfig.GetApiResources())
