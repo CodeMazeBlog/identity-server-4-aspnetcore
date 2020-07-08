@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.29728.190
+VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyEmployees.OAuth", "CompanyEmployees.OAuth\CompanyEmployees.OAuth.csproj", "{2289CFF0-D8DA-40D2-B39A-4BA40977F507}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyEmployees.OAuth", "CompanyEmployees.OAuth\CompanyEmployees.OAuth.csproj", "{9EE99DDE-031C-42B2-88F2-87F67FFDBF01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2289CFF0-D8DA-40D2-B39A-4BA40977F507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2289CFF0-D8DA-40D2-B39A-4BA40977F507}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2289CFF0-D8DA-40D2-B39A-4BA40977F507}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2289CFF0-D8DA-40D2-B39A-4BA40977F507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EE99DDE-031C-42B2-88F2-87F67FFDBF01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EE99DDE-031C-42B2-88F2-87F67FFDBF01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EE99DDE-031C-42B2-88F2-87F67FFDBF01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EE99DDE-031C-42B2-88F2-87F67FFDBF01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {40E32A69-ADA4-4C9A-863F-72EAA55D3A13}
+		SolutionGuid = {5E6F7B9B-E285-4AA5-B83D-7B0D5D1D8B8D}
 	EndGlobalSection
 EndGlobal
